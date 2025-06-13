@@ -23,6 +23,20 @@ public class CircularLinkedList {
         newNode.next = head;
         return newNode;
     }
+    public static Node insertAtEnd(Node head, int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            newNode.next = newNode;
+            return newNode;
+        }
+        Node current = head;
+        while (current.next != head) {
+            current = current.next;
+        }
+        current.next = newNode;
+        newNode.next = head;
+        return head;
+    }
 
     
 

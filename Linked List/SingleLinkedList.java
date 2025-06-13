@@ -15,6 +15,9 @@ public class SingleLinkedList {
     
     public static Node insertAtBeginning(Node head, int data) {
         Node newNode = new Node(data);
+        if(head == null) {
+            return newNode;
+        }
         newNode.next = head;
         head = newNode;
         return head;
