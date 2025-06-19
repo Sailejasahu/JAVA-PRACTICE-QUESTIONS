@@ -195,6 +195,7 @@ public static int[] seperateEvenAndOdd(int[] arr) {
     }
 
 
+    
 
     
 

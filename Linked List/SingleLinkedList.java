@@ -12,9 +12,13 @@ public class SingleLinkedList {
     }
 
     public static Node insertAtBeginning(Node head, int data) {
+        if (head == null) {
+            return new Node(data);
+        }
         Node newNode = new Node(data);
         newNode.next = head;
-        return newNode;
+        head= newNode;
+        return head;
     }
 
     public static Node insertAtEnd(Node head, int data) {
@@ -144,7 +148,8 @@ public class SingleLinkedList {
         Node fast = head;
         Node slow = head;
         for (int i = 0; i < n; i++) {
-            if (fast == null) return -1;
+            if (fast == null) 
+            return -1;
             fast = fast.next;
         }
         while (fast != null) {
@@ -299,7 +304,7 @@ public class SingleLinkedList {
             temp = temp.next;
         }
         System.out.println("null");
-    }
+    }   
 
     public static void main(String[] args) {
         SingleLinkedList ll = new SingleLinkedList();
